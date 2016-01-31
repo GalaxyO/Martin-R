@@ -1,0 +1,80 @@
+
+1.
+
+SELECT ålder FROM Uppgift1 WHERE LIKE förnamn='%tt%';
+
+SELECT förnamn FROM Uppgift1 WHERE efternamn='NULL';
+
+SELECT * FROM Uppgift1 WHERE förnamn='K%';
+
+SELECT förnamn FROM Uppgift1 WHERE ålder<10;
+
+SELECT efternamn FROM Uppgift1;
+
+2.
+
+CREATE TABLE nytab ( namn varchar(32));
+
+CREATE TABLE nytab ( stad varchar(32), kommun varchar(32), landskap varchar(32), län varchar(32),
+land varchar(32), världsdel varchar(32), postkod varchar(32), invånare varchar(32)) );
+
+3.
+
+INSERT INTO nytab (stad) VALUES ('Mora', 'Göteborg', 'Kungsbacka', 'Halmstad', 'Malmö', 'Lund', 'Växjö', 'Makaryd',
+'Ljungby', 'Helsingborg', 'Falkenberg', 'Varberg', 'Trollhättan', 'Uddevalla', 'Borås');
+
+INSERT INTO nytab(stad,kommun,landskap,län,postkod,invånare) VALUES  
+("Mora","Mora kommun","Dalarna","Dalarnas län",79201,11000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+('Göteborg, "Göteborgs kommun", "Västergötaland", "Västra Götalands Län", 40010, 100000);  
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Kungsbacka", "Kungsbacka kommun", "Halland", "Halland län", 42700,20000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Halmstad", "Halmstad kommun", "Halland", "Halland län", 30004, 60000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Malmö", "Malmö kommun", "Skåne", "Skåne län", 20001, 30000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Lund", "Lund kommun", "Skåne", "Skåne län", 22002, 85000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Växjö", "Växjö kommun", "Småland", Småland län", 34032, 75000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Markaryd", "Markaryd kommun", "Småland", "Småland län", 28501, 5000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Ljungby", "Ljungby kommun", "Småland, "Småland län", 34101, 20000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Helsingborg", "Helsingborg kommun", "Skåne, "Skåne län", 25002, 150000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Falkenberg", "Falkenberg kommun", "Halland", "Halland län", 31101, 50000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES      
+("Varberg", "Varberg kommun", "Halland", "Halland län", 31101, 75000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Trollhättan", "Trollhättan kommun", "Västragötaland", "Västra Götalands län", 40010, 10000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES
+("Uddevalla", "Uddevalla kommun", "Västragötaland", "Västra Götalands län", 40010, 20000);
+
+INSERT INTO nytab (stad,kommun,landskap,län,postkod,invånare) VALUES  
+("Borås","Borås kommun","Västergötaland","Västra Götalands län",50100,66273);
+
+
+5.
+
+SELECT * FROM nytab ORDER by invånare DESC;
+
+SELECT * FROM nytab where stad LIKE '%Auto%';
+
+SELECT * FROM nytab ORDER by postkod ASC;
+
+
