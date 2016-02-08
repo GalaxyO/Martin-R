@@ -1,0 +1,96 @@
+// Connect PHP
+
+<?php
+
+DEFINE('DB_USER','root');
+ 	DEFINE('DB_HOST','localhost');
+ 	DEFINE('DB_PASSWORD','COMMANDER5');
+ 	DEFINE('DB_DATABASE','test');
+ 		
+ 		
+ 	$dbc = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_DATABASE);
+
+?>
+
+// Anslut PHP
+
+<?php
+
+	require_once('../phps/mysql_connect.php');
+	// Ger variabeln $dbc som är anslutningen till databasen.
+	
+	$query = mysql_query("SELECT 'Efternamn' FROM Kunder WHERE 'Förnamn' = 'Per');
+	while (($row = mysql_fetch_assoc($query)) !== 'Per') {
+	echo $row ['Förnamn'], '<br />';
+
+	$query = mysql_query(SELECT Förnamn FROM Kunder WHERE Förnamn LIKE '___');
+	while (($row = mysql_fetch_assoc($query)) !== '___') {
+	echo $row ['Förnamn'], '<br />';
+
+	$query = mysql_query(SELECT * FROM Kunder WHERE Mellannamn IS NULL);
+	while (($row = mysql_fetch_assoc($query)) !== NULL) {
+	echo $row ['Mellanamn'], '<br />';
+
+	$query = mysql_query(SELECT * FROM Kunder WHERE Mellannamn LIKE '% %');
+	while (($row = mysql_fetch_assoc($query)) !== '% %') {
+	echo $row ['Mellanamn'], '<br />';
+	
+	$query = mysql_query(SELECT * FROM Kunder WHERE Mellannamn IS NULL AND Förnamn='Per');
+	while (($row = mysql_fetch_assoc($query)) !== NULL, 'Per') {
+	echo $row ['Mellanamn', 'Förnamn'], '<br />';
+
+	$query = mysql_query(SELECT Förnamn, Mellannamn, Efternamn FROM Kunder WHERE
+Personnummer LIKE '%1_' OR
+Personnummer LIKE '%3_' OR
+Personnummer LIKE '%5_' OR
+Personnummer LIKE '%7_' OR
+Personnummer LIKE '%9_');
+	while (($row = mysql_fetch_assoc($query)) !== '%1_','%3_','%5_','%7_','%9_') {
+	echo $row ['Förnamn'], '<br />';
+
+	query = mysql_query(SELECT Kundnummer FROM Kunder WHERE Personnummer >= 5002010000);
+	while (($row = mysql_fetch_assoc($query)) !>= 5002010000) {
+	echo $row ['Personummer'], '<br />';
+
+	query = mysql_query(SELECT * FROM Kunder WHERE Personnummer !>= 8102010000
+AND 
+(
+Personnummer LIKE '%0_' OR
+Personnummer LIKE '%2_' OR
+Personnummer LIKE '%4_' OR
+Personnummer LIKE '%6_' OR
+Personnummer LIKE '%8_')
+	while (($row = mysql_fetch_assoc($query)) !== '%0_','%2_,'%4_,'%6_,%8_') {
+	echo $row ['Personummer', 'Förnamn'], '<br />';
+
+	query = mysql_query(SELECT Förnamn Mellannamn Efternamn FROM Kunder WHERE Kundnummer LIKE '___';
+eller
+SELECT Postnummmer FROM Kunder WHERE 
+Kundnummer >= 100 AND Kundnummer <= 999;);
+	while (($row = mysql_fetch_assoc($query)) !== '___', >100 and 'Kundnummer' <= 999) {
+	echo $row ['Förnamn', 'Mellanamn', 'Efternamn'], '<br />';
+
+	query = mysql_query(SELECT * FROM Kunder WHERE 
+(
+Personummer LIKE '%48__' OR
+Personummer LIKE '%49__' OR
+Personummer LIKE '%50__' OR
+Personummer LIKE '%51__' OR
+Personummer LIKE '%52__' OR
+Personummer LIKE '%53__' OR
+Personummer LIKE '%54__'
+) 
+AND
+Personnummer <= 8912319999);
+	while (($row = mysql_fetch_assoc($query)) !== '%48__', '%49__', '%50__', '%51__',
+'%52__', '%53__', '%54__') {
+	echo $row ['Kundnummer'], '<br />';
+
+
+?>
+
+// Databasen
+
+CREATE TABLE Kunnder( Kundnummer int(10) NOT ULL AUTO_INCREMENT, Förnamn varchar(32), Efternamn varchar(32),
+Mellannamn varchar(64), Personummer int(10), Adress varchar(64), Postnummer int(6), Postort varchar(32),
+PRIMARE KEY (Kundnummer) );
