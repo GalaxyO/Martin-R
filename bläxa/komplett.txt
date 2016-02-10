@@ -12,7 +12,7 @@ DEFINE('DB_USER','root');
 
 ?>
 
-// Anslut PHP
+//  PHP Kommandona
 
 <?php
 
