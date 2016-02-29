@@ -18,3 +18,5 @@
 
 
 SELECT * FROM Orders, Customers;
+
+SELECT * FROM Products, Orders;
