@@ -1,30 +1,20 @@
 
 <?php
-	require_once('../phps/mysql_connect.php');
-	// Ger variabeln $dbc som är anslutningen till databasen.
-	
-	$query = 'SELECT City,Population FROM Cities where population >= 5000000 ORDER BY Population DESC;';
+session_start(); // Starta session
 
-	$result = mysqli_query($dbc, $query);
-	
-	echo '<table border="solid">';
-	while($row = mysqli_fetch_array($result)){
-	
-	echo '<tr><td>' . ucfirst($row['City']) . ' </td> <td> ' . $row['Population'] . '</td></tr>';
+if(!@$_SESSION['loggedIn']){ // Om man inte �r inloggad
+	header('Location: login.php'); // Skickas till login.php
 }
 
-echo '</table>';
 
-$query = 'SELECT City,Population FROM Cities where latitude >=0 ORDER BY City;';
-$result = mysqli_query($dbc, $query);
+if(@$_SESSION['timeout']+ 60*10 < time()){ //Om Sessionstiden + 10(60sekunder*10) minuter �r mindre �n nuvarande tid
+	session_destroy(); // Avsluta sessionen
+	session_unset(); // Avsluta sessionen (gammalt s�tt)
+	$meddelande = 'Well fought, I concede'; // Meddelande till anv�ndare = Hej d�
+}else{ //Sessionen fortfarande aktiv
+	$meddelande = 'Greetings Traveler'; // Meddeladne till anv�ndare = Hej
+	$_SESSION['timeout'] = time(); // Uppdatera sessionstiden
+}
 
-$query2 = 'SELECT City,Population,Latitude FROM Cities where latitude >=0 ORDER BY City;';
-$result2 = mysqli_query($dbc, $query2);
-
-echo '<table border="solid">';
-	while($row = mysqli_fetch_array($result2)){
-	echo '<tr><td>' . $row['City'] . ' </td> <td> ' . $row['Population'] . '</td> <td> ' .  $row['Latitude'] . '</td></tr>';
-		
-	}
-	echo '</table>';
+echo $meddelande; // Visa meddelande ( Greetings Traveler = Inloggad | Well fought, I concede = Utloggad)
 ?>
