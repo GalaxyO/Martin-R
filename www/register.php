@@ -20,10 +20,10 @@
   <form id="form" action="regsend.php" method="post">
     <div class="box">
       <label id="First_Name" for="First_Name"></label>
-      <input type="text" name"name" id="name" placeholder="First Name" required/>
-      <input type="text" name="password" placeholder="Password" required/>
-      <input type="text" name="mail" placeholder="Mail" required/>
-      <input type="text" name"country" placeholder="Country" required/>
+      <input type="text" name="First_Name" id="First_Name" placeholder="User Name" required/>
+      <input type="text" name="Password" placeholder="Password" required/>
+      <input type="text" name="Mail" placeholder="Mail" required/>
+      <input type="text" name="Country" placeholder="Country" required/>
       <td class="center">
       <input type="submit" id="submit" name="submit" value="Login"/>
       <p> <a href="login.php"><span>Request Accepted?</span></a></p>

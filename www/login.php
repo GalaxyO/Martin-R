@@ -22,16 +22,15 @@ if(@$_SESSION['loggedIn']){ //Kolla om man är inloggad
         <video id="Video2" class="bgvid inner" autoplay="false" muted="muted" preload="auto" loop>
         <source src="http://shortcodelic1.manuelmasiacsasi.netdna-cdn.com/themes/geode/wp-content/uploads/2014/04/milky-way-river-1280hd.mp4.mp4" type="video/mp4">
         </video>
+            <div class="box">
+
         <form id="form" action="confirm.php" method="post">
-    <div class="box">
-      <form class="login-form">
-      <label id="user" for="name"></label>
-      <input type="text" name"name" id="name" placeholder="Username" required/>
-      <input type="password" name="password" placeholdr="Password" required/>
+      <label id="user" for="First_Name"></label>
+      <input type="text" name="First_Name" id="First_Name" placeholder="Username" required/>
+      <input type="Password" name="Password" placeholder="Password" required/>
       <td class="center">
       <input type="submit" id="submit" name="submit" value="Login"/>
-      <p> <a href="#"><span>Squire attend me</span></a></p>
-      <p> <a href="register.php"><span>Ready sir</span</a></p>
+      <p> <a href="register.php"><span>Register</span></a></p>
     </form>
     </div>
   </div>
