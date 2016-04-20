@@ -24,7 +24,7 @@ if($row){ // Om Användarnamnet i databasen är samma som från formuläret
 	header('Location: loggedIn/indo.php'); // Skickas till index.php
 }else{ // Om användarnamnen inte stämmer överens
 	$_SESSION['loggedIn'] = FALSE; // Inloggad FALSKT
-	header('Location: http://www.hltv.org/news/11703-verygames-to-shut-down'); // Skickas till RiP
+	header('Location: http://www.hltv.org/news/11703-verygames-to-shut-down'); // Skickas till dåliga tider pågrund av fel lösenord/användarnamn
 }
 
 ?>

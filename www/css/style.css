@@ -79,6 +79,7 @@ body{
 .box p span{
   cursor:pointer;
   color:#666;
+  margin-right: 80%;
 }
 
 p {
