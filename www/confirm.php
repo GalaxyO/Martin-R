@@ -17,11 +17,16 @@ $id = mysqli_fetch_array($result); //Hämta den rad man får som svar (Om det fi
 $pw = "SELECT * FROM passwords WHERE User_id =".$id['ID']." AND Password=PASSWORD('".$_POST['Password']."');";
 $result = mysqli_query($dbc,$query);
 $row = mysqli_fetch_array($result);
+$skins = $row['ID'];
+$First_Name = $row['First_Name'];
+$First_Name = explode(' ',$First_Name)[0];
 
 if($row){ // Om Användarnamnet i databasen är samma som från formuläret
 	$_SESSION['loggedIn'] = TRUE; // Inloggad SANT
 	$_SESSION['timeout'] = time(); // Timeout = Nuvarande tid 
+	$_SESSION['First_Name'] = $First_Name;
 	header('Location: loggedIn/indo.php'); // Skickas till index.php
+	echo $_SESSION['First_Name'];
 }else{ // Om användarnamnen inte stämmer överens
 	$_SESSION['loggedIn'] = FALSE; // Inloggad FALSKT
 	header('Location: http://www.hltv.org/news/11703-verygames-to-shut-down'); // Skickas till dåliga tider pågrund av fel lösenord/användarnamn
