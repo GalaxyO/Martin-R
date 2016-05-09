@@ -16,7 +16,8 @@ if(@$_SESSION['loggedIn']){ //Kolla om man är inloggad
     <link rel="stylesheet" type="text/css" href="../css/style.css">
   </head>
   <body>
-  
+
+<?php include 'duck.php'; ?>
   <a href="logout.php">Skins man</a>
 
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

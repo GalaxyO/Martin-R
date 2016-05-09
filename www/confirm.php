@@ -26,7 +26,6 @@ if($row){ // Om Användarnamnet i databasen är samma som från formuläret
 	$_SESSION['timeout'] = time(); // Timeout = Nuvarande tid 
 	$_SESSION['First_Name'] = $First_Name;
 	header('Location: loggedIn/indo.php'); // Skickas till index.php
-	echo $_SESSION['First_Name'];
 }else{ // Om användarnamnen inte stämmer överens
 	$_SESSION['loggedIn'] = FALSE; // Inloggad FALSKT
 	header('Location: http://www.hltv.org/news/11703-verygames-to-shut-down'); // Skickas till dåliga tider pågrund av fel lösenord/användarnamn

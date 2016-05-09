@@ -16,5 +16,5 @@ $id = mysqli_fetch_array($result);
 $pw = "insert into passwords(User_id,Password) values (".$id['ID'].",PASSWORD('".$_POST['Password']."'));";
 mysqli_query($dbc,$pw);
 
-
+header('location: login.php');
 ?>
