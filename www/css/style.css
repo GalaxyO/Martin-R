@@ -17,7 +17,7 @@ body{
 }
 .inner-container{
   width:400px;
-  height:400px;
+  height:500px;
   position:absolute;
   top:calc(50vh - 200px);
   left:calc(50vw - 200px);
@@ -34,7 +34,7 @@ body{
 }
 .box{
   position:absolute;
-  height:100%;
+  height:120%;
   width:100%;
   font-family:Verdana;
   color:#fff;
@@ -74,7 +74,6 @@ body{
 }
 .box p{
   font-size:14px;
-  text-align:center;
 }
 .box p span{
   cursor:pointer;
@@ -85,4 +84,10 @@ body{
 p {
   font-family: papyrus;
   margin-left: 45%;
+  text-align: left;
+}
+
+h2 {
+  font-family: Matura MT Script Capitals;
+  text-align: center;
 }

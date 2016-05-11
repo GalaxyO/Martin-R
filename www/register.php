@@ -17,6 +17,7 @@
         <source src="http://shortcodelic1.manuelmasiacsasi.netdna-cdn.com/themes/geode/wp-content/uploads/2014/04/milky-way-river-1280hd.mp4.mp4" type="video/mp4">
         </video>
 
+
   <form id="form" action="regsend.php" method="post">
     <div class="box">
       <label id="First_Name" for="First_Name"></label>
@@ -26,7 +27,8 @@
       <input type="text" name="Country" placeholder="Country" required/>
       <td class="center">
       <input type="submit" id="submit" name="submit" value="Login"/>
-      <p> <a href="login.php"><span>Request Accepted?</span></a></p>
+      
+      <p><a href="login.php">Back to Login Page</a></p>
     </form>
     </div>
   </div>

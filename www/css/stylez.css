@@ -50,7 +50,7 @@ background-color:#FF0000;
     color: white;
     margin-left: 12%;
     margin-top: -1%;
-    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color:  black;
 }
 
@@ -68,16 +68,16 @@ background-color:#FF0000;
     width: 50%;
     margin-left: 15%;
     top: 40px;
-    left: 1,12px;
+    left: 1.12px;
     position: relative;
     border-style: double;
-    border-color: black;
+    border-color: #00000F;
 }
 
 #ezlife {
-    margin-top: 3.5%;
+    margin-top: 2.5%;
     font-family: papyrus;
     color: white;
-    text-align: left;
+    text-align: center;
     margin-left: 7%;
 }

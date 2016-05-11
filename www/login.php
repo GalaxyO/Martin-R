@@ -24,6 +24,7 @@ if(@$_SESSION['loggedIn']){ //Kolla om man är inloggad
         </video>
             <div class="box">
 
+              <h2> Login </h2>
         <form id="form" action="confirm.php" method="post">
       <label id="user" for="First_Name"></label>
       <input type="text" name="First_Name" id="First_Name" placeholder="Username" required/>
