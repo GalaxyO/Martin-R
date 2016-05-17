@@ -31,7 +31,7 @@ if(@$_SESSION['timeout']+ 1337-420 < time()){ //Om Sessionstiden + 4x20 sekunder
   <li><a href="../index.php">Home</a></li>
   <li><a href="products.php">Products</a></li>
   <li><a href="support.php">Support</a></li>
-  <li><a href="profile.php">Profile</a></li>
+  <li><a href="chat.php">Chat</a></li>
   <li><a class="active"href="cart.php">Cart</a></li>
   <li><a href="logout.php">Logout</a></li>
 </ul>

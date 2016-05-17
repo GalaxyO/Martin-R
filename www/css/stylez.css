@@ -81,3 +81,52 @@ background-color:#FF0000;
     text-align: center;
     margin-left: 7%;
 }
+
+#description {
+    margin-top: 2%;
+    background-image: url(tr.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+
+}
+
+#submit {
+  display:block;
+  width:20%;
+  margin:-30px auto;
+  padding:-5px;
+  margin-left: 80%;
+  background:rgba(0,0,0,0.25);
+  color:#fff;
+  border:0;
+  text-align: center;
+}
+
+div.blacksmall {
+    font-family: papyrus;
+    color: white;
+}
+
+.blacksmall {
+    font-family: papyrus;
+    color: white;
+}
+
+.smallblack {
+    font-family: papyrus;
+    color: white;
+    border: double 1px;
+    border-radius: 10%;
+    background-color: black;
+    position: absolute;
+    margin-top: 15%;
+}
+
+.submitbox {
+    background-color: #white;
+    font-family: monospace;
+    border-radius: 8%;
+    opacity: 0.55;
+    ;
+}
