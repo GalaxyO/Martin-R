@@ -25,6 +25,7 @@ if($row){ // Om Användarnamnet i databasen är samma som från formuläret
 	$_SESSION['loggedIn'] = TRUE; // Inloggad SANT
 	$_SESSION['timeout'] = time(); // Timeout = Nuvarande tid 
 	$_SESSION['First_Name'] = $First_Name;
+	$_SESSION['id'] = $skins; //id
 	header('Location: loggedIn/indo.php'); // Skickas till index.php
 }else{ // Om användarnamnen inte stämmer överens
 	$_SESSION['loggedIn'] = FALSE; // Inloggad FALSKT

@@ -1,14 +1,7 @@
-﻿<?php
+<?php
 session_start();
 
-if(@$_SESSION['timeout']+ 1337-420 < time()){ //Om Sessionstiden + 4x20 sekunder innan användaren får timeout
-	session_destroy(); // Avsluta sessionen
-	session_unset(); // Avsluta sessionen (gammalt sätt)
-	$meddelande = 'Ha det g'; // Meddelande till användare = Segt
-}else{ //Sessionen fortfarande aktiv
-	$meddelande = 'Still hope'; // Meddelande till användare = The Butcher
-	$_SESSION['timeout'] = time(); // Uppdatera sessionstiden
-} 
+include 'includes/bonus.php';
 ?>
 
 <!DOCTYPE html> 
@@ -42,7 +35,7 @@ if(@$_SESSION['timeout']+ 1337-420 < time()){ //Om Sessionstiden + 4x20 sekunder
   
   <form action="supp.php" method="POST">
   <span class="blacksmall"> Department:</span>
-  <select class="submitbox" name="departments" id="departments">
+  <select div class="submitbox" name="departments" id="departments">
   <option>Difficulties</option>
   <option>Issues with Product</option>
   <option>Errors</option>
@@ -50,8 +43,8 @@ if(@$_SESSION['timeout']+ 1337-420 < time()){ //Om Sessionstiden + 4x20 sekunder
 </select>
 <textarea name = "description" id="description" rows="15" cols="60" placeholder="Please describe the issue you are having.."> </textarea>
 <input type="submit" id="submit" name="submit" value="Create Ticket"/>
-
 <a div class="smallblack"href="ticko.php"> Browse Tickets</a>
+
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="js/index.js"></script>
     
