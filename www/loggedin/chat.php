@@ -1,6 +1,4 @@
 ﻿<?php
-session_start();
-
 include 'includes/bonus.php'; 
 ?>
 

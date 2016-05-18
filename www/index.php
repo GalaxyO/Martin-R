@@ -18,7 +18,7 @@ if(@$_SESSION['timeout']+ 1337-420 < time()){ //Om Sessionstiden + 4x20 sekunder
 <!DOCTYPE html> 
 <html>
   <head>
-    <img src="faze.png" id="logga">  
+    <img src="loggedin/faze.png" id="logga">  
     <h2> SiA</h2>
     <meta charset="UTF-8">
     <title> Home </title>
