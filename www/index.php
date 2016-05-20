@@ -27,8 +27,7 @@ if(@$_SESSION['timeout']+ 1337-420 < time()){ //Om Sessionstiden + 4x20 sekunder
   <body>
 
   <?php 
-  echo "<p id='loginN'> Logged in as "; 
-  echo $_SESSION['First_Name']; echo "</p>";
+  include 'loggedin/includes/user.php'
   ?>
   
 <ul>
@@ -42,10 +41,8 @@ if(@$_SESSION['timeout']+ 1337-420 < time()){ //Om Sessionstiden + 4x20 sekunder
 
 <div id="box">
   <p id ='ezlife'> Greetings Traveler! Would you like to buy some unique diseases? </p>
-  <p id ='ezlife'> Head over to products to see our custom made collection </p>
+  <p id ='ezlife'> Head over to Products to see our custom made collection </p>
 
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="js/index.js"></script>
   </body>
 </html>
 

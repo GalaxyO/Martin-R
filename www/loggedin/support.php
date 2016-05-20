@@ -14,8 +14,7 @@ include 'includes/bonus.php';
   <body>
 
 <?php 
-  echo "<p id='loginN'> Logged in as "; 
-  echo $_SESSION['First_Name']; echo "</p>";
+include 'includes/user.php'
   ?>
   
 <ul>
@@ -39,13 +38,11 @@ include 'includes/bonus.php';
   <option>Errors</option>
   <option>Other</option>
 </select>
+
 <textarea name = "description" id="description" rows="15" cols="60" placeholder="Please describe the issue you are having.."> </textarea>
 <input type="submit" id="submit" name="submit" value="Create Ticket"/>
 <a div class="smallblack"href="ticko.php"> Browse Tickets</a>
 
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="js/index.js"></script>
-    
   </body>
 </html>
 

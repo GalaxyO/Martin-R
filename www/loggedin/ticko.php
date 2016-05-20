@@ -26,12 +26,10 @@ include 'includes/bonus.php';
   <li><a href="cart.php">Cart</a></li>
   <li><a href="logout.php">Logout</a></li>
 </ul>
-
+<a div id="david" href="kill.php">Delete Tickets</a>
+  
   <?php
 include 'includes/ticka.php';
   ?>
-
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="js/index.js"></script>
   </body>
 </html>

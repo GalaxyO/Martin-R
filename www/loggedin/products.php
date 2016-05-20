@@ -14,8 +14,7 @@ include 'includes/bonus.php';
   <body>
 
  <?php 
-  echo "<p id='loginN'> Logged in as "; 
-  echo $_SESSION['First_Name']; echo "</p>";
+  include 'includes/user.php'
   ?>
   
 <ul>
@@ -28,9 +27,7 @@ include 'includes/bonus.php';
 </ul>
 
 <div id="box">
-  
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="js/index.js"></script>
+
   </body>
 </html>
 
