@@ -27,7 +27,7 @@ if(@$_SESSION['timeout']+ 1337-420 < time()){ //Om Sessionstiden + 4x20 sekunder
   <body>
 
   <?php 
-  include 'loggedin/includes/user.php'
+  include 'loggedin/includes/user.php' // inkluderar en php som echoar username
   ?>
   
 <ul>

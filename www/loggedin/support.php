@@ -1,5 +1,5 @@
 <?php
-include 'includes/bonus.php';
+include 'includes/bonus.php'; // inkluderar ett timeout system
 ?>
 
 <!DOCTYPE html> 
@@ -14,7 +14,7 @@ include 'includes/bonus.php';
   <body>
 
 <?php 
-include 'includes/user.php'
+include 'includes/user.php'; // inkluderar en php som echoar username
   ?>
   
 <ul>
