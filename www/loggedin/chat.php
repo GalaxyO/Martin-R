@@ -27,7 +27,7 @@ include 'includes/bonus.php'; // inkluderar ett timeout system
 </ul>
 
 <div id="box">
-  
+
   </body>
 </html>
 

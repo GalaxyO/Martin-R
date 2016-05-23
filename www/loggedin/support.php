@@ -30,7 +30,7 @@ include 'includes/user.php'; // inkluderar en php som echoar username
 
   <div class="blacksmall"> Create Ticket</div>
   
-  <form action="supp.php" method="POST">
+  <form action="tickets/supp.php" method="POST">
   <span class="blacksmall"> Department:</span>
   <select div class="submitbox" name="departments" id="departments">
   <option>Difficulties</option>
@@ -41,7 +41,7 @@ include 'includes/user.php'; // inkluderar en php som echoar username
 
 <textarea name = "description" id="description" rows="15" cols="60" placeholder="Please describe the issue you are having.."> </textarea>
 <input type="submit" id="submit" name="submit" value="Create Ticket"/>
-<a div class="smallblack"href="ticko.php"> Browse Tickets</a>
+<a div class="smallblack"href="tickets/ticko.php"> Browse Tickets</a>
 
   </body>
 </html>
