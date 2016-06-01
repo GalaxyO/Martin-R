@@ -193,16 +193,17 @@ div.blacksmall {
 
 .dav {
 position: absolute;
-margin-left: 11%;
-margin-top: 13%;
+margin-left: -45%;
+margin-top: 20%;
 font-size: 80%;
 font-family: verdana;
 color: white;
 }
 
 .plupp {
-margin-left: 35.5%;
-margin-top: 1%;
+position: absolute;
+margin-left: -25.5%;
+margin-top: 20%;
 font-size: 80%;
 font-family: verdana;
 color: white;
@@ -210,8 +211,8 @@ color: white;
 
 .hood {
 position: absolute;
-margin-left: 19%;
-margin-top: 0%;
+margin-left: -7.5%;
+margin-top: 20%;
 font-size: 80%;
 font-family: verdana;
 color: white;

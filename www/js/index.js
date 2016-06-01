@@ -1,21 +1,20 @@
-// Easy way to wait for all videos to load before start playing
+// Alla videor väntar på varandra att laddad därefter börjar spelas.
 
 var promises = [];
 function makePromise(i, video) {
   promises[i] = new $.Deferred();
-  // This event tells us video can be played all the way through, without stopping or buffering
+  // Detta event berättar för oss att nu kan filerna spelet utan stopp/buffer.
   video.oncanplaythrough = function() {
-    // Resolve the promise
     promises[i].resolve();
   }
 }
-// Pause all videos and create the promise array
+// Pausa alla videos och gå till väga med "promise" arrayen.
 $('video').each(function(index){
   this.pause();
   makePromise(index, this);
 })
 
-// Wait for all promises to resolve then start playing
+// Vänta för alla att resolvas därefter startar animationen.
 $.when.apply(null, promises).done(function () {
   $('video').each(function(){
     this.play();

@@ -5,7 +5,7 @@ require_once('C:/wamp/phps/mysql_connect.php');
 $query = 'SELECT * FROM products'; // Läser in alla produkter
 $support = mysqli_query($dbc,$query);
 
-echo '<div id="allticka">';
+echo '<div id="allticka">'; 
 while ($row = mysqli_fetch_array($support)) {
 	echo '<div id="pbo">';
 	echo $row['Product_Name'];
@@ -23,8 +23,8 @@ while ($row = mysqli_fetch_array($support)) {
 <!DOCTYPE html> 
 <html>
 <body>
-<a href="skins.php" class="dav"><a/>
-<a href="skins1.php"class="plupp"></a>
-<a href="skins2.php"class="hood"></a>
+<a href="skins.php" class="dav">Order1<a/>
+<a href="skins1.php"class="plupp">Order2</a>
+<a href="skins2.php"class="hood">Order3</a>
   </body>
 </html>
