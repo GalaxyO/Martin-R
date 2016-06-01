@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include 'includes/bonus.php'; // inkluderar ett timeout system
 ?>
 
@@ -26,8 +26,9 @@ include 'includes/bonus.php'; // inkluderar ett timeout system
   <li><a href="logout.php">Logout</a></li>
 </ul>
 
-<div id="box">
-
+<?php
+  include 'product/produkt.php';
+?>
   </body>
 </html>
 

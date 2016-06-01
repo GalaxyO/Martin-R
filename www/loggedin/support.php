@@ -39,7 +39,7 @@ include 'includes/user.php'; // inkluderar en php som echoar username
   <option>Other</option>
 </select>
 
-<textarea name = "description" id="description" rows="15" cols="60" placeholder="Please describe the issue you are having.."> </textarea>
+<textarea name = "description" id="description" rows="15" cols="60" placeholder="Please describe the issue you are having.."></textarea>
 <input type="submit" id="submit" name="submit" value="Create Ticket"/>
 <a div class="smallblack"href="tickets/ticko.php"> Browse Tickets</a>
 

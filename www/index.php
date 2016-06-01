@@ -1,18 +1,5 @@
 <?php
-session_start(); // Starta session
-if(!@$_SESSION['loggedIn']){ // Om man inte är inloggad
-	header('Location: login.php'); // Skickas till login.php
-}
-
-
-if(@$_SESSION['timeout']+ 1337-420 < time()){ //Om Sessionstiden + 4x20 sekunder innan användaren får timeout
-	session_destroy(); // Avsluta sessionen
-	session_unset(); // Avsluta sessionen (gammalt sätt)
-	$meddelande = 'Ha det g'; // Meddelande till användare = Segt
-}else{ //Sessionen fortfarande aktiv
-	$meddelande = 'Still hope'; // Meddelande till användare = The Butcher
-	$_SESSION['timeout'] = time(); // Uppdatera sessionstiden
-} 
+include 'loggedin/includes/bona.php'; // inkluderar en intressant php
 ?>
 
 <!DOCTYPE html> 
@@ -27,7 +14,7 @@ if(@$_SESSION['timeout']+ 1337-420 < time()){ //Om Sessionstiden + 4x20 sekunder
   <body>
 
   <?php 
-  include 'loggedin/includes/user.php' // inkluderar en php som echoar username
+  include 'loggedin/includes/user.php'; // inkluderar en php som echoar username
   ?>
   
 <ul>
