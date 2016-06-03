@@ -12,5 +12,5 @@ $query = "SELECT ID FROM users ORDER BY ID DESC LIMIT 1";
 $result = mysqli_query($dbc,$query);
 
 $id = mysqli_fetch_array($result);
-header('Location: ../../index.php');
+header('Location: ../support.php');
 ?>

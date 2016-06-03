@@ -5,7 +5,7 @@ include 'includes/bonus.php'; // inkluderar ett timeout system
 <!DOCTYPE html> 
 <html>
   <head>
-    <img src="faze.png" id="logga">
+    <img src="images/faze.png" id="logga">
     <h2> SiA </h2>
     <meta charset="UTF-8">
     <title> Support </title>
@@ -21,7 +21,6 @@ include 'includes/user.php'; // inkluderar en php som echoar username
   <li><a href="../index.php">Home</a></li>
   <li><a href="products.php">Products</a></li>
   <li><a class="active" href="support.php">Support</a></li>
-  <li><a href="chat.php">Chat</a></li>
   <li><a href="cart.php">Cart</a></li>
   <li><a href="logout.php">Logout</a></li>
 </ul>

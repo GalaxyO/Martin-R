@@ -5,7 +5,7 @@ include 'loggedin/includes/bona.php'; // inkluderar en intressant php
 <!DOCTYPE html> 
 <html>
   <head>
-    <img src="loggedin/faze.png" id="logga">  
+    <img src="loggedin/images/faze.png" id="logga">  
     <h2> SiA</h2>
     <meta charset="UTF-8">
     <title> Home </title>
@@ -21,7 +21,6 @@ include 'loggedin/includes/bona.php'; // inkluderar en intressant php
   <li><a class="active" href="index.php">Home</a></li>
   <li><a href="loggedIn/products.php">Products</a></li>
   <li><a href="loggedIn/support.php">Support</a></li>
-  <li><a href="loggedIn/chat.php">Chat</a></li>
   <li><a href="loggedIn/cart.php">Cart</a></li>
   <li><a href="loggedIn/logout.php">Logout</a></li>
 </ul>

@@ -16,6 +16,13 @@ h2{
 
 }
 
+h3{
+    font-family: monospace, sans-serif;
+    text-align: left;
+    margin-left: 20%;
+    color: #FFFFFF;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -189,31 +196,4 @@ div.blacksmall {
     border:0;
     text-align: center;
     position: absolute;
-}
-
-.dav {
-position: absolute;
-margin-left: -45%;
-margin-top: 20%;
-font-size: 80%;
-font-family: verdana;
-color: white;
-}
-
-.plupp {
-position: absolute;
-margin-left: -25.5%;
-margin-top: 20%;
-font-size: 80%;
-font-family: verdana;
-color: white;
-}
-
-.hood {
-position: absolute;
-margin-left: -7.5%;
-margin-top: 20%;
-font-size: 80%;
-font-family: verdana;
-color: white;
 }

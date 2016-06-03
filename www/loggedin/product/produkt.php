@@ -19,12 +19,3 @@ while ($row = mysqli_fetch_array($support)) {
 	echo "'/></div>";
 }
 ?>
-
-<!DOCTYPE html> 
-<html>
-<body>
-<a href="skins.php" class="dav">Order1<a/>
-<a href="skins1.php"class="plupp">Order2</a>
-<a href="skins2.php"class="hood">Order3</a>
-  </body>
-</html>
