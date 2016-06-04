@@ -81,9 +81,8 @@ if(isset($_SESSION["products"])){
 </div>
 
 <?php
-//List products from database
+//Lista produkter från databas
 $results = $mysqli_conn->query("SELECT product_name, product_desc, product_code, product_image, product_price FROM products_list");
-//Display fetched records as you please
 
 $products_list =  '<ul class="products-wrp">';
 
@@ -96,11 +95,11 @@ $products_list .= <<<EOT
 <div>Price : {$currency} {$row["product_price"]}<div>
 <div class="item-box">
     <div>
-	Color :
+	Rarity :
     <select name="product_color">
-    <option value="Red">Red</option>
-    <option value="Blue">Blue</option>
-    <option value="Orange">Orange</option>
+    <option value="Standard">Standard</option>
+    <option value="Holo">Holo</option>
+    <option value="Foil">Foil</option>
     </select>
 	</div>
 	
@@ -118,9 +117,9 @@ $products_list .= <<<EOT
 	<div>
     Size :
     <select name="product_size">
-	<option value="M">M</option>
+	<option value="S">S</option>
+    <option value="M">M</option>
     <option value="XL">XL</option>
-    <option value="XXL">XLL</option>
     </select>
 	</div>
 	

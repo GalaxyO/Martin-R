@@ -1,50 +1,48 @@
 <?php
-session_start(); //start session
-include_once("config.inc.php"); //include config file
-setlocale(LC_MONETARY,"en_US"); // US national format (see : http://php.net/money_format)
-############# add products to session #########################
+
+session_start();
+include_once("config.inc.php"); //inkluderar en config fil
 if(isset($_POST["product_code"]))
 {
 	foreach($_POST as $key => $value){
-		$new_product[$key] = filter_var($value, FILTER_SANITIZE_STRING); //create a new product array 
+		$new_product[$key] = filter_var($value, FILTER_SANITIZE_STRING); //Skapar en product array 
 	}
 	
-	//we need to get product name and price from database.
+	//Vi lägger en statement för att få reda på product namn och pris från databasen
 	$statement = $mysqli_conn->prepare("SELECT product_name, product_price FROM products_list WHERE product_code=? LIMIT 1");
 	$statement->bind_param('s', $new_product['product_code']);
 	$statement->execute();
 	$statement->bind_result($product_name, $product_price);
 	
-
 	while($statement->fetch()){ 
-		$new_product["product_name"] = $product_name; //fetch product name from database
-		$new_product["product_price"] = $product_price;  //fetch product price from database
+		$new_product["product_name"] = $product_name; //product namn från databas
+		$new_product["product_price"] = $product_price; // product pris från databas
 		
-		if(isset($_SESSION["products"])){  //if session var already exist
-			if(isset($_SESSION["products"][$new_product['product_code']])) //check item exist in products array
+		if(isset($_SESSION["products"])){  //om session var redan finns
+			if(isset($_SESSION["products"][$new_product['product_code']])) //kollar om producten finns
 			{
-				unset($_SESSION["products"][$new_product['product_code']]); //unset old item
+				unset($_SESSION["products"][$new_product['product_code']]); //unset gamla produkter
 			}			
 		}
 		
-		$_SESSION["products"][$new_product['product_code']] = $new_product;	//update products with new item array	
+		$_SESSION["products"][$new_product['product_code']] = $new_product;	//uppdatera producter med ny vara
 	}
 	
- 	$total_items = count($_SESSION["products"]); //count total items
-	die(json_encode(array('items'=>$total_items))); //output json 
+ 	$total_items = count($_SESSION["products"]); //Räknar ihop totala produkter
+	die(json_encode(array('items'=>$total_items))); 
 
 }
 
-################## list products in cart ###################
+//	Listar produkten i cart
 if(isset($_POST["load_cart"]) && $_POST["load_cart"]==1)
 {
 
-	if(isset($_SESSION["products"]) && count($_SESSION["products"])>0){ //if we have session variable
+	if(isset($_SESSION["products"]) && count($_SESSION["products"])>0){ //om vi har en sessions variabel
 		$cart_box = '<ul class="cart-products-loaded">';
 		$total = 0;
-		foreach($_SESSION["products"] as $product){ //loop though items and prepare html content
+		foreach($_SESSION["products"] as $product){ //Loopa produkterna med html, css
 			
-			//set variables to use them in HTML content below
+			//variabler som skall användas till html
 			$product_name = $product["product_name"]; 
 			$product_price = $product["product_price"];
 			$product_code = $product["product_code"];
@@ -58,16 +56,16 @@ if(isset($_POST["load_cart"]) && $_POST["load_cart"]==1)
 		}
 		$cart_box .= "</ul>";
 		$cart_box .= '<div class="cart-products-total">Total : '.$currency.sprintf("%01.2f",$total).'</div>';
-		die($cart_box); //exit and output content
+		die($cart_box);
 	}else{
-		die("Your Cart is empty"); //we have empty cart
+		die("Your Cart is empty"); //Tom cart
 	}
 }
 
-################# remove item from shopping cart ################
+//	Tar bort produkter från cart
 if(isset($_GET["remove_code"]) && isset($_SESSION["products"]))
 {
-	$product_code   = filter_var($_GET["remove_code"], FILTER_SANITIZE_STRING); //get the product code to remove
+	$product_code   = filter_var($_GET["remove_code"], FILTER_SANITIZE_STRING);
 
 	if(isset($_SESSION["products"][$product_code]))
 	{
