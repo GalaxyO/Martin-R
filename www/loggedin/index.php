@@ -12,39 +12,38 @@ $(document).ready(function(){
 		$(".form-item").submit(function(e){
 			var form_data = $(this).serialize();
 			var button_content = $(this).find('button[type=submit]');
-			button_content.html('Adding...'); //Loading button text 
+			button_content.html('Adding...'); //Laddar button text 
 
-			$.ajax({ //make ajax request to cart_process.php
+			$.ajax({ //Gör en ajax request till cart_process
 				url: "cart_process.php",
 				type: "POST",
-				dataType:"json", //expect json value from server
+				dataType:"json", //förväntar json value from servern
 				data: form_data
-			}).done(function(data){ //on Ajax success
-				$("#cart-info").html(data.items); //total items in cart-info element
-				button_content.html('Add to Cart'); //reset button text to original text
+			}).done(function(data){ //Vid Ajax success
+				$("#cart-info").html(data.items); 
+				button_content.html('Add to Cart');
 				alert("Item added to Cart!"); //alert user
-				if($(".shopping-cart-box").css("display") == "block"){ //if cart box is still visible
-					$(".cart-box").trigger( "click" ); //trigger click to update the cart box.
-				}
+				if($(".shopping-cart-box").css("display") == "block"){//om cartbox fortfarande är synlig
+					$(".cart-box").trigger( "click" ); 
+							}
 			})
 			e.preventDefault();
 		});
 
-	//Show Items in Cart
-	$( ".cart-box").click(function(e) { //when user clicks on cart box
+	//Visa produkter i cart
+	$( ".cart-box").click(function(e) { //När användaren klickar på cart box
 		e.preventDefault(); 
 		$(".shopping-cart-box").fadeIn(); //display cart box
-		$("#shopping-cart-results").html('<img src="images/ajax-loader.gif">'); //show loading image
-		$("#shopping-cart-results" ).load( "cart_process.php", {"load_cart":"1"}); //Make ajax request using jQuery Load() & update results
+		$("#shopping-cart-results" ).load( "cart_process.php", {"load_cart":"1"}); //Gör en ajax request som använder jQuery Load() & updaterar resultat
 	});
 	
-	//Close Cart
-	$( ".close-shopping-cart-box").click(function(e){ //user click on cart box close link
+	//Stänger Cart
+	$( ".close-shopping-cart-box").click(function(e){
 		e.preventDefault(); 
-		$(".shopping-cart-box").fadeOut(); //close cart-box
+		$(".shopping-cart-box").fadeOut();
 	});
 	
-	//Remove items from cart
+	//Tar bort produkter från cart
 	$("#shopping-cart-results").on('click', 'a.remove-item', function(e) {
 		e.preventDefault(); 
 		var pcode = $(this).attr("data-code"); //get product code
@@ -81,7 +80,7 @@ if(isset($_SESSION["products"])){
 </div>
 
 <?php
-//Lista produkter från databas
+//Listar produkter från databas
 $results = $mysqli_conn->query("SELECT product_name, product_desc, product_code, product_image, product_price FROM products_list");
 
 $products_list =  '<ul class="products-wrp">';
@@ -104,7 +103,7 @@ $products_list .= <<<EOT
 	</div>
 	
 	<div>
-    Qty :
+    Quantity :
     <select name="product_qty">
     <option value="1">1</option>
     <option value="2">2</option>

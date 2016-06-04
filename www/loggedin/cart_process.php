@@ -5,7 +5,7 @@ include_once("config.inc.php"); //inkluderar en config fil
 if(isset($_POST["product_code"]))
 {
 	foreach($_POST as $key => $value){
-		$new_product[$key] = filter_var($value, FILTER_SANITIZE_STRING); //Skapar en product array 
+		$new_product[$key] = filter_var($value, FILTER_SANITIZE_STRING); //Skapar en produkt array 
 	}
 	
 	//Vi lägger en statement för att få reda på product namn och pris från databasen

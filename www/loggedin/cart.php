@@ -10,7 +10,6 @@ include 'includes/bonus.php'; // inkluderar ett timeout system
     <meta charset="UTF-8">
     <title> Cart </title>
     <link rel="stylesheet" type="text/css" href="../css/styley.css">
-    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
   </head>
   <body>
 

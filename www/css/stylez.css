@@ -1,7 +1,7 @@
 /* Inloggad CS */
 
 body{
-    background-image: url('bg.jpg');
+    background-image: url('pics/bg.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -71,7 +71,7 @@ background-color:#FF0000;
 }
 
 #box {
-    background-image: url(hrv.jpg);
+    background-image: url(pics/hrv.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 400px;
@@ -94,7 +94,7 @@ background-color:#FF0000;
 
 #description {
     margin-top: 2%;
-    background-image: url(tr.jpg);
+    background-image: url(pics/tr.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color: white;
@@ -143,7 +143,7 @@ div.blacksmall {
     font-family: verdana;
     font-size: 11;
     color: navy;
-    background-image: url(over.jpg);
+    background-image: url(pics/over.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     margin-left: 5%;
