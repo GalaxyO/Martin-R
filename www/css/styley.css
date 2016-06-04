@@ -3,7 +3,7 @@
 body{
     background-image: url('bg.jpg');
     background-repeat: no-repeat;
-    background-size: 140%;
+    background-size: 100%;
 }
 
 h2{
@@ -16,6 +16,11 @@ h2{
 
 }
 
+h4{
+
+    font-family: monospace sans-serif;
+    margin-left: -16.5%;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -67,8 +72,9 @@ ul.products-wrp {
     list-style: none;
     padding: 0;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;  
+    margin-left:  20%;
+    margin-right: auto; 
+    margin-top: 1.5%; 
     color: #777;  
     text-align: center;
 }
@@ -109,17 +115,18 @@ ul.products-wrp li .item-box button[disabled=disabled]{
 .cart-box {
     display: block;
     width: 30px;
-    background: rgba(219, 0, 33, 1) url(../images/cart-icon.png) no-repeat 20px 5px;
+    background: red url(../images/cart-icon.png) no-repeat 20px 5px;
     padding: 4px 8px 4px 8px;
     border-radius: 30px;
-    color: #fff;
+    color: #FFFFFF;
     font-family: Arial;
     font-size: 16px;
     text-decoration: none;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.32);
     margin-right: auto;
-    margin-left: auto;
+    margin-left: 40%;
     font-weight: bold;
+    margin-top: -1%;
 }
 .cart-box:hover{
     background: #FA1C5F url(../images/cart-icon.png) no-repeat 20px 5px;
@@ -163,7 +170,7 @@ ul.products-wrp li .item-box button[disabled=disabled]{
   float: right;
 }
 #shopping-cart-results ul.cart-products-loaded li{
-    background: #ED0C50;
+    background: #FF0000;
     margin-bottom: 1px;
     padding: 6px 4px 6px 10px;
 }
@@ -197,7 +204,7 @@ ul.view-cart {
   background: #fff;
   padding: 15px 15px 15px 25px;
   list-style: none;
-  border: 1px solid #ECECEC;
+  border: 1px solid #FF0000;
   border-radius: 4px;
 }
 ul.view-cart li span{

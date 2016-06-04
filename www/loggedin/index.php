@@ -60,7 +60,7 @@ $(document).ready(function(){
 </head>
 <body>
 <div align="center">
-<h3>Cart</h3>
+<h4>Cart</h4>
 </div>
 
 <a href="#" class="cart-box" id="cart-info" title="View Cart">
