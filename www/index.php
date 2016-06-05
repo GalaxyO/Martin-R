@@ -14,7 +14,7 @@ include 'loggedin/includes/bona.php'; // inkluderar en intressant php
   <body>
 
   <?php 
-  include 'loggedin/includes/user.php'; // inkluderar en php som echoar username
+  include 'loggedin/includes/user.php'; // inkluderar en php som skriver ut användarnamnet
   ?>
   
 <ul>

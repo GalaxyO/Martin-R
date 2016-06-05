@@ -20,12 +20,4 @@ while ($row = mysqli_fetch_array($support)) {
 }
 ?>
 
-<!DOCTYPE html> 
-<html>
-<body>
-<a href="skins.php" class="dav">Buy<a/>
-<a href="skins1.php"class="plupp">Buy2</a>
-<a href="skins2.php"class="hood">Buy3</a>
-  </body>
-</html>
 
