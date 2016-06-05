@@ -28,13 +28,17 @@ include 'loggedin/includes/bona.php'; // inkluderar en intressant php
 <div id="box">
   <p id ='ezlife'> Greetings Traveler! Would you like to buy some unique diseases? </p>
   <p id ='ezlife'> Head over to Products to see our custom made collection </p> 
+
 <?php
-      for ($leap = 2016; $leap < 2022; $leap = $leap + 2) {
-        echo '<div id="flopp">';
-        echo "<p>$leap</p>";
-        echo '</div>';
-      }
-    ?>
+$li = array("Skins", "is", "Life");
+$arr = count($li);
+for($i = 0; $i < $arr; $i++) {
+    echo '<div id="flopp">';
+    echo $li[$i];
+    echo "<br>";
+    echo '</div>';
+  }
+?>
   </body>
 </html>
 

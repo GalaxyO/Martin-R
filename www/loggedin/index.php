@@ -1,6 +1,6 @@
 <?php
 require_once('C:/wamp/phps/mysql_connect.php');
-include("config.inc.php"); //include config file
+include("C:/wamp/phps/config.inc.php"); //include config file
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -132,5 +132,5 @@ EOT;
 }
 $products_list .= '</ul></div>';
 
-echo $products_list;
+echo $products_list; // Listan av produkter skrivs ut
 ?>

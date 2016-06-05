@@ -1,7 +1,6 @@
 <?php
-
 session_start();
-include_once("config.inc.php");
+include_once("C:/wamp/phps/config.inc.php");
 if(isset($_POST["product_code"]))
 {
 	foreach($_POST as $key => $value){
@@ -18,14 +17,14 @@ if(isset($_POST["product_code"]))
 		$new_product["product_name"] = $product_name; //product namn från databas
 		$new_product["product_price"] = $product_price; // product pris från databas
 		
-		if(isset($_SESSION["products"])){  //om session var redan finns
+		if(isset($_SESSION["products"])){  //om session redan finns
 			if(isset($_SESSION["products"][$new_product['product_code']])) //kollar om producten finns
 			{
 				unset($_SESSION["products"][$new_product['product_code']]); //unset gamla produkter
 			}			
 		}
 		
-		$_SESSION["products"][$new_product['product_code']] = $new_product;	//uppdatera producter med ny vara
+		$_SESSION["products"][$new_product['product_code']] = $new_product;	//uppdaterar produkter med ny vara
 	}
 	
  	$total_items = count($_SESSION["products"]); //Räknar ihop totala produkter

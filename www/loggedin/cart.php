@@ -26,7 +26,7 @@ include 'includes/bonus.php'; // inkluderar ett timeout system
 </ul>
 
 <?php 
-include 'index.php';
+include 'index.php'; // inkluderar produkt + cart + javascript 
 ?>
   
 </body>

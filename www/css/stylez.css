@@ -3,7 +3,7 @@
 body{
     background-image: url('pics/bg.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 125%;
 }
 
 h2{
@@ -75,7 +75,7 @@ background-color:#FF0000;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 400px;
-    width: 45%;
+    width: 600px;
     margin-left: 15%;
     top: 40px;
     left: 1.12px;

@@ -19,7 +19,7 @@ include 'includes/bonus.php'; // inkluderar ett timeout system
   
 <ul>
   <li><a href="../index.php">Home</a></li>
-  <li><a class="active" href="products.php">Product</a></li>
+  <li><a class="active" href="products.php">Products</a></li>
   <li><a href="support.php">Support</a></li>
   <li><a href="cart.php">Cart</a></li>
   <li><a href="logout.php">Logout</a></li>
