@@ -11,7 +11,7 @@ while ($row = mysqli_fetch_array($support)) {
 	echo $row['departments'];
 	echo ":<br />";
 	echo $row['description'];
-	echo "<br />";
+	echo "<br /> <br />";
 	echo $row['reply'];
 	echo '</div>';
 }

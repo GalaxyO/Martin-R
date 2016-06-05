@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include_once("config.inc.php"); //inkluderar en config fil
+include_once("config.inc.php");
 if(isset($_POST["product_code"]))
 {
 	foreach($_POST as $key => $value){

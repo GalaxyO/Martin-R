@@ -27,8 +27,23 @@ include 'includes/bonus.php'; // inkluderar ett timeout system
 
 <h3> Future Possible Projects </h3>
 
-<?php
+<?php // Inkluderar en fil och en switch case som skriver ut Spacenoodles
   include 'product/produkt.php';
+  $favteam = "Tempostorm";
+
+switch ($favteam) {
+    case "Denial":
+        echo "Denial";
+        break;
+    case "Tempostorm":
+        echo "Spacenoodles";
+        break;
+    case "FaZe":
+        echo "FaZe!";
+        break;
+    default:
+        echo "Keine!";
+}
 ?>
   </body>
 </html>
