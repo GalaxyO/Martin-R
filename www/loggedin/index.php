@@ -6,7 +6,7 @@ include("C:/wamp/phps/config.inc.php"); //include config file
 <html>
 <head>
 <link href="style/style.css" rel="stylesheet" type="text/css">
-<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
 <script>
 $(document).ready(function(){	
 		$(".form-item").submit(function(e){
